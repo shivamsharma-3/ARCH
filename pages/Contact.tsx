@@ -6,7 +6,7 @@ const Contact: React.FC = () => {
   const [crmSelection, setCrmSelection] = useState('');
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-  e.preventDefault(); // 🚫 stop page reload
+  e.preventDefault();
 
   const form = e.currentTarget;
   const formData = new FormData(form);
@@ -14,19 +14,16 @@ const Contact: React.FC = () => {
   try {
     await fetch("/", {
       method: "POST",
-      headers: {
-        "Content-Type": "application/x-www-form-urlencoded",
-      },
-      body: new URLSearchParams(formData as any).toString(),
+      body: formData, // ✅ IMPORTANT: send FormData directly
     });
 
-    alert("Request submitted successfully!");
+    alert("Form submitted successfully!");
     form.reset();
-    setCrmSelection("");
-  } catch (error) {
-    alert("Something went wrong. Please try again.");
+  } catch (err) {
+    alert("Submission failed. Please try again.");
   }
 };
+
 
   const selectStyle = {
     backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%232dd4bf' stroke-width='3'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' d='M19 9l-7 7-7-7' /%3E%3C/svg%3E")`,
@@ -97,7 +94,6 @@ const Contact: React.FC = () => {
           name="request-audit"
           method="POST"
           data-netlify="true"
-          data-netlify-honeypot="bot-field"
           action="/success.html"
           onSubmit={handleSubmit}
         >
