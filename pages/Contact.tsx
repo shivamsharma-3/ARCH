@@ -97,7 +97,7 @@ const Contact: React.FC = () => {
           name="request-audit"
           method="POST"
           data-netlify="true"
-          action="/#/success"
+          action="/success.html"
         >
          <input type="hidden" name="form-name" value="request-audit" />
 
