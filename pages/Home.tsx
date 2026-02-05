@@ -161,10 +161,13 @@ const Home: React.FC = () => {
           <h3 className="text-4xl md:text-6xl font-extrabold mb-6 text-white relative z-10 tracking-tighter max-w-2xl mx-auto leading-[1.1]">
             Let’s build a revenue system that works.
           </h3>
-          <div className="flex flex-col items-center gap-4 relative z-10 mb-12">
+          <div className="flex flex-col items-center gap-8 relative z-10 mb-12">
             <p className="text-xs text-neutral-500 uppercase tracking-widest font-bold">
               No contracts. No retainers discussed before the audit.
             </p>
+            <Button to="/contact" className="px-10 py-5 text-lg shadow-[0_20px_40px_rgba(255,255,255,0.1)]">
+              Request System Audit
+            </Button>
           </div>
 
           {/* Subtle Trust Signals */}
