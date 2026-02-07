@@ -90,8 +90,7 @@ const Contact: React.FC = () => {
       </div>
 
       <div className="md:w-1/2" id="audit-form-container">
-        <form 
-          
+        <form
           name="request-audit"
           method="POST"
           data-netlify="true"
