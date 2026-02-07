@@ -5,6 +5,26 @@ import { CheckCircle } from 'lucide-react';
 const Contact: React.FC = () => {
   const [crmSelection, setCrmSelection] = useState('');
 
+/*  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+  e.preventDefault();
+
+  const form = e.currentTarget;
+  const formData = new FormData(form);
+
+  try {
+    await fetch("/", {
+      method: "POST",
+      body: formData, // ✅ IMPORTANT: send FormData directly
+    });
+
+    alert("Form submitted successfully!");
+    form.reset();
+  } catch (err) {
+    alert("Submission failed. Please try again.");
+  }
+};
+
+*/
   const selectStyle = {
     backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%232dd4bf' stroke-width='3'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' d='M19 9l-7 7-7-7' /%3E%3C/svg%3E")`,
     backgroundRepeat: 'no-repeat',
@@ -16,10 +36,10 @@ const Contact: React.FC = () => {
     <div className="max-w-6xl mx-auto px-6 py-12 flex flex-col md:flex-row gap-10">
       <div className="md:w-1/2">
         <h1 className="text-5xl font-bold tracking-tighter mb-6 leading-tight">
-          Request Your Free Revenue System Audit.
+          Request your Revenue<br />System Audit.
         </h1>
         <p className="text-xl text-neutral-400 font-medium leading-relaxed mb-8">
-          This audit identifies what’s broken in your outbound setup and what needs to change to book qualified sales calls consistently.
+          This complimentary audit is designed for B2B service companies that want a clear, repeatable system for booking qualified sales conversations — without relying on referrals or guesswork.
         </p>
         
         <div className="space-y-6">
@@ -70,17 +90,19 @@ const Contact: React.FC = () => {
       </div>
 
       <div className="md:w-1/2" id="audit-form-container">
-        <form 
+        <form
           name="request-audit"
           method="POST"
           data-netlify="true"
           data-netlify-honeypot="bot-field"
+         // action="/success.html"
+          //onSubmit={handleSubmit}
         >
          <input type="hidden" name="form-name" value="request-audit" />
          <input type="hidden" name="bot-field" />
 
-          <div className="grid grid-cols-2 gap-6">
-            <div className="space-y-2">
+          <div className="grid grid-cols-2 gap-4">
+            <div className="space-y-1">
               <label className="text-[10px] font-bold uppercase tracking-widest text-neutral-500 ml-4">Full Name</label>
               <input 
                 required
@@ -164,14 +186,14 @@ const Contact: React.FC = () => {
           )}
 
           <div className="pt-4 space-y-4">
-            <Button className="w-full">Request Free System Audit</Button>
-            <p className="text-[10px] text-center text-neutral-400 font-black uppercase tracking-widest">
-              Free audit • No sales pitch • No obligation
+            <Button className="w-full">Request Audit</Button>
+            <p className="text-[10px] text-center text-neutral-500 font-black uppercase tracking-widest">
+              No contracts. No retainers discussed before the audit.
             </p>
           </div>
           
-          <p className="text-[10px] text-center text-neutral-500 font-medium uppercase tracking-tighter">
-            Trusted by B2B service teams using HubSpot, Salesforce & Pipedrive
+          <p className="text-[10px] text-center text-neutral-600 font-medium uppercase tracking-tighter">
+            Your data is handled securely and will never be shared.
           </p>
         </form>
       </div>
