@@ -5,26 +5,6 @@ import { CheckCircle } from 'lucide-react';
 const Contact: React.FC = () => {
   const [crmSelection, setCrmSelection] = useState('');
 
-/*  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-  e.preventDefault();
-
-  const form = e.currentTarget;
-  const formData = new FormData(form);
-
-  try {
-    await fetch("/", {
-      method: "POST",
-      body: formData, // ✅ IMPORTANT: send FormData directly
-    });
-
-    alert("Form submitted successfully!");
-    form.reset();
-  } catch (err) {
-    alert("Submission failed. Please try again.");
-  }
-};
-
-*/
   const selectStyle = {
     backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%232dd4bf' stroke-width='3'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' d='M19 9l-7 7-7-7' /%3E%3C/svg%3E")`,
     backgroundRepeat: 'no-repeat',
@@ -95,14 +75,14 @@ const Contact: React.FC = () => {
           method="POST"
           data-netlify="true"
           data-netlify-honeypot="bot-field"
-         // action="/success.html"
+          action="/success.html
           //onSubmit={handleSubmit}
         >
          <input type="hidden" name="form-name" value="request-audit" />
          <input type="hidden" name="bot-field" />
 
-          <div className="grid grid-cols-2 gap-4">
-            <div className="space-y-1">
+          <div className="grid grid-cols-2 gap-6">
+            <div className="space-y-2">
               <label className="text-[10px] font-bold uppercase tracking-widest text-neutral-500 ml-4">Full Name</label>
               <input 
                 required
@@ -186,14 +166,14 @@ const Contact: React.FC = () => {
           )}
 
           <div className="pt-4 space-y-4">
-            <Button className="w-full">Request Audit</Button>
-            <p className="text-[10px] text-center text-neutral-500 font-black uppercase tracking-widest">
+            <Button className="w-full">Request Free System Audit</Button>
+            <p className="text-[10px] text-center text-neutral-400 font-black uppercase tracking-widest">
               Free audit • No sales pitch • No obligation
             </p>
           </div>
           
-          <p className="text-[10px] text-center text-neutral-600 font-medium uppercase tracking-tighter">
-            Your data is handled securely and will never be shared.
+          <p className="text-[10px] text-center text-neutral-500 font-medium uppercase tracking-tighter">
+            Trusted by B2B service teams using HubSpot, Salesforce & Pipedrive
           </p>
         </form>
       </div>
