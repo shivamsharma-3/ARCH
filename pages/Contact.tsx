@@ -36,10 +36,10 @@ const Contact: React.FC = () => {
     <div className="max-w-6xl mx-auto px-6 py-12 flex flex-col md:flex-row gap-10">
       <div className="md:w-1/2">
         <h1 className="text-5xl font-bold tracking-tighter mb-6 leading-tight">
-          Request your Revenue<br />System Audit.
+          Request Your Free Revenue System Audit.
         </h1>
         <p className="text-xl text-neutral-400 font-medium leading-relaxed mb-8">
-          This complimentary audit is designed for B2B service companies that want a clear, repeatable system for booking qualified sales conversations — without relying on referrals or guesswork.
+          We audit your CRM, targeting, and outbound infrastructure to show exactly what’s blocking consistent sales conversations — and how to fix it.
         </p>
         
         <div className="space-y-6">
@@ -185,14 +185,14 @@ const Contact: React.FC = () => {
           )}
 
           <div className="pt-4 space-y-4">
-            <Button className="w-full">Request Audit</Button>
+            <Button className="w-full">Get My Free Audit</Button>
             <p className="text-[10px] text-center text-neutral-500 font-black uppercase tracking-widest">
-              No contracts. No retainers discussed before the audit.
+              Free audit • No sales pitch • No obligation
             </p>
           </div>
           
           <p className="text-[10px] text-center text-neutral-600 font-medium uppercase tracking-tighter">
-            Your data is handled securely and will never be shared.
+            Trusted by B2B service teams using HubSpot, Salesforce & Pipedrive
           </p>
         </form>
       </div>
